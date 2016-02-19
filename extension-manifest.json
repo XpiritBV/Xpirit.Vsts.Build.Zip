@@ -2,15 +2,15 @@
     "manifestVersion":  1,
     "id":  "PeterGroenewegen-Xpirit-Vsts-Build-Zip-Test",
     "name":  "Zip directory build task",
-    "version":  "1.0.3",
-    "publisher":  "Peter Groenewegen - Xpirit",
-    "public":  false,
+    "version":  "1.0.4",
+    "publisher":  "petergroenewegen",
+    "public":  flase,
     "targets":  [
                     {
                         "id":  "Microsoft.VisualStudio.Services"
                     }
                 ],
-    "description":  "Build extensions that enable you to create zips from directories.",
+    "description":  "Build extension that enable you to create zips from directories.",
     "categories":  [
                        "Build and release"
                    ],

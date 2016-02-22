@@ -4,7 +4,7 @@
     "name":  "Zip directory build task",
     "version":  "1.0.4",
     "publisher":  "petergroenewegen",
-    "public":  flase,
+    "public":  false,
     "targets":  [
                     {
                         "id":  "Microsoft.VisualStudio.Services"

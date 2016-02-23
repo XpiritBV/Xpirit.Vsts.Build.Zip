@@ -1,72 +1,85 @@
 {
-    "manifestVersion":  1,
-    "id":  "PeterGroenewegen-Xpirit-Vsts-Build-Zip-Test",
-    "name":  "Zip directory build task",
-    "version":  "1.0.4",
-    "publisher":  "petergroenewegen",
-    "public":  false,
-    "targets":  [
-                    {
-                        "id":  "Microsoft.VisualStudio.Services"
-                    }
-                ],
-    "description":  "Build extension that enable you to create zips from directories.",
-    "categories":  [
-                       "Build and release"
-                   ],
-    "tags":  [
-                 "zip",
-                 "directory",
-                 "build"
-             ],
-    "screenshots":  [
-                        {
-                            "path":  "Xpirit.Vsts.Build.Zip.Extension/images/screenshots/vsts-zip-tasks.png"
-                        },
-                        {
-                            "path":  "Xpirit.Vsts.Build.Zip.Extension/images/screenshots/vsts-zip-zip.png"
-                        }
-                    ],
-    "content":  {
-                    "details":  {
-                                    "path":  "Xpirit.Vsts.Build.Zip.Extension/readme.md"
-                                },
-                    "license":  {
-                                    "path":  "Xpirit.Vsts.Build.Zip.Extension/license.txt"
-                                }
-                },
-    "links":  {
-                  "getstarted":  {
-                                     "uri":  "https://github.com/XpiritBV/Xpirit.Vsts.Build.Zip/wiki"
-                                 },
-                  "support":  {
-                                  "uri":  "https://github.com/XpiritBV/Xpirit.Vsts.Build.Zip/wiki"
-                              }
-              },
-    "branding":  {
-                     "color":  "rgb(36, 43, 50)",
-                     "theme":  "dark"
-                 },
-    "icons":  {
-                  "default":  "Xpirit.Vsts.Build.Zip.Extension/images/Windows_7_zip_Icon_128.png"
-              },
+  "manifestVersion": 1,
+  "id": "PeterGroenewegen-Xpirit-Vsts-Build-Zip",
+  "name": "Zip and unzip directory build task",
+  "version": "1.0.5",
+  "publisher": "petergroenewegen",
+  "public": true,
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "description": "Build extension that enable you to create zips from directories and unzip a zip file into a directory.",
+  "categories": [
+    "Build and release"
+  ],
+  "tags": [
+    "zip",
+    "directory",
+    "build",
+    "unzip"
+  ],
+  "screenshots": [
+    {
+      "path": "Xpirit.Vsts.Build.Zip.Extension/images/screenshots/vsts-zip-tasks.png"
+    },
+    {
+      "path": "Xpirit.Vsts.Build.Zip.Extension/images/screenshots/vsts-zip-zip.png"
+    }
+  ],
+  "content": {
+    "details": {
+      "path": "Xpirit.Vsts.Build.Zip.Extension/readme.md"
+    },
+    "license": {
+      "path": "Xpirit.Vsts.Build.Zip.Extension/license.txt"
+    }
+  },
+  "links": {
+    "getstarted": {
+      "uri": "https://github.com/XpiritBV/Xpirit.Vsts.Build.Zip/wiki"
+    },
+    "support": {
+      "uri": "https://github.com/XpiritBV/Xpirit.Vsts.Build.Zip/wiki"
+    }
+  },
+  "branding": {
+    "color": "rgb(36, 43, 50)",
+    "theme": "dark"
+  },
+  "icons": {
+    "default": "Xpirit.Vsts.Build.Zip.Extension/images/Windows_7_zip_Icon_128.png"
+  },
   "files": [
     {
       "path": "Xpirit-Vsts-Build-Zip"
+    },
+    {
+      "path": "Xpirit-Vsts-Build-UnZip"
     }
   ],
 
-    "contributions":  [
-                          {
-                              "id":  "Xpirit-Vsts-Build-Zip",
-                              "type":  "ms.vss-distributed-task.task",
-                              "targets":  [
-                                              "ms.vss-distributed-task.tasks"
-                                          ],
-                              "properties":  {
-                                                 "name":  "Xpirit-Vsts-Build-Zip"
-                                             }
-                          }
-                      ]
+  "contributions": [
+    {
+      "id": "Xpirit-Vsts-Build-Zip",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "Xpirit-Vsts-Build-Zip"
+      }
+    },
+    {
+      "id": "Xpirit-Vsts-Build-UnZip",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "Xpirit-Vsts-Build-UnZip"
+      }
+    }
+  ]
 }
-

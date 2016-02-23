@@ -19,8 +19,10 @@ if (-not $ItemSpec -eq "")
 
 Foreach ($Item in $DirectoryFiles) 
 { 
-    $Item = [System.IO.Path]::Combine($env:BUILD_SOURCESDIRECTORY, $Item)
-	Write-Output "Item $Item to zip"
-	ZipFiles (-join($Item,".zip")) (-join($Item))
-} 
+	if ($Item){
+		$Item = [System.IO.Path]::Combine($env:BUILD_SOURCESDIRECTORY, $Item)
+		Write-Output "Item $Item to zip"
+		ZipFiles (-join($Item,".zip")) (-join($Item))
+	} 
+}
 

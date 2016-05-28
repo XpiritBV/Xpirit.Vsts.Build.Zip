@@ -1,14 +1,25 @@
 Param(
-    [string] $ItemSpec = "$/"
+    [string] $ItemSpec = ""
 )
+
+Add-Type -Assembly System.IO.Compression.FileSystem
+
+function Resolve-PathSafe
+{
+    param
+    (
+        [string] $Path
+    )
+    $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($Path)
+}
+
 
 function ZipFiles( $zipfilename, $sourcedir )
 {
-   Add-Type -Assembly System.IO.Compression.FileSystem
    $compressionLevel = [System.IO.Compression.CompressionLevel]::Optimal
-   [System.IO.Compression.ZipFile]::CreateFromDirectory($sourcedir,
-        $zipfilename, $compressionLevel, $false)
+   [System.IO.Compression.ZipFile]::CreateFromDirectory($sourcedir, $zipfilename, $compressionLevel, $false)
 }
+
 
 Write-Output "ItemSpec: $ItemSpec" 
 
@@ -20,9 +31,11 @@ if (-not $ItemSpec -eq "")
 Foreach ($Item in $DirectoryFiles) 
 { 
 	if ($Item){
-		$Item = [System.IO.Path]::Combine($env:BUILD_SOURCESDIRECTORY, $Item)
-		Write-Output "Item $Item to zip"
-		ZipFiles (-join($Item,".zip")) (-join($Item))
+		$Item = Resolve-PathSafe  $Item
+    	$ZipFile = -join($Item,".zip")
+
+		Write-Output "Directory $Item to zip $ZipFile"
+	    ZipFiles  $ZipFile $Item
 	} 
 }
 

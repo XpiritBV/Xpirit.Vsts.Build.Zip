@@ -1,6 +1,6 @@
 # Xpirit.Vsts.Build.Zip
 
-A set of Build tasks for TFS 2015 and Visual Studio Team Services that enables you to Zip a directory.
+A set of Build tasks for TFS 2015 and Visual Studio Team Services that enables you to Zip and Unzip a directories.
 
 # Documentation
 

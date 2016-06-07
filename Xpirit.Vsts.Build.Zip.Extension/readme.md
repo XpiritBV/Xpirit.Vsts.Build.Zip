@@ -4,5 +4,5 @@ A set of Build tasks for TFS 2015 and Visual Studio Team Services that enables y
 
 # Documentation
 
-Please check the [Wiki](https://github.com/XpiritBV/Xpirit.Vsts.Build.Zip/wiki).
+Please check the [get started](https://pgroene.wordpress.com/2016/05/28/using-the-vsts-directory-zip-and-unzip-task/).
 

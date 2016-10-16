@@ -34,7 +34,7 @@
     "PowerShell": {
       "target": "$(currentDirectory)\\Zip.ps1",
       "argumentFormat": "",
-      "workingDirectory": "$(System.DefaultWorkingDirectory)"
+      "workingDirectory": "$(currentDirectory)"
     }
   }
 }

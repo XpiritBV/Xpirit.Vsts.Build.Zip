@@ -43,7 +43,7 @@
     "PowerShell": {
       "target": "$(currentDirectory)\\UnZip.ps1",
       "argumentFormat": "",
-      "workingDirectory": "$(System.DefaultWorkingDirectory)"
+      "workingDirectory": "$(currentDirectory)"
     }
   }
 }

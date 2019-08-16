@@ -12,7 +12,7 @@
   ],
   "description": "Build extension that enable you to create zips from directories and unzip a zip file into a directory.",
   "categories": [
-    "Build and release"
+    "Azure Pipelines"
   ],
   "tags": [
     "zip",

@@ -9,8 +9,8 @@
   "author": "Peter Groenewegen - Xpirit",
   "version": {
     "Major": 1,
-    "Minor": 1,
-    "Patch": 4
+    "Minor": 2,
+    "Patch": 0
   },
   "demands": [ ],
   "minimumAgentVersion": "1.90.0",

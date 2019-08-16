@@ -31,7 +31,7 @@
   ],
   "instanceNameFormat": "Zip directories",
   "execution": {
-    "PowerShell": {
+    "PowerShell3": {
       "target": "$(currentDirectory)\\Zip.ps1",
       "argumentFormat": "",
       "workingDirectory": "$(currentDirectory)"

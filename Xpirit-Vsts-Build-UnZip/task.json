@@ -40,7 +40,7 @@
   ],
   "instanceNameFormat": "Unzip",
   "execution": {
-    "PowerShell": {
+    "PowerShell3": {
       "target": "$(currentDirectory)\\UnZip.ps1",
       "argumentFormat": "",
       "workingDirectory": "$(currentDirectory)"

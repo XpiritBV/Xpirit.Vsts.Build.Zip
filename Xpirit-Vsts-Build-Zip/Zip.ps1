@@ -1,7 +1,3 @@
-Param(
-    [string] $ItemSpec = ""
-)
-
 Add-Type -Assembly System.IO.Compression.FileSystem
 
 function Resolve-PathSafe
@@ -19,6 +15,8 @@ function ZipFiles( $zipfilename, $sourcedir )
    $compressionLevel = [System.IO.Compression.CompressionLevel]::Optimal
    [System.IO.Compression.ZipFile]::CreateFromDirectory($sourcedir, $zipfilename, $compressionLevel, $false)
 }
+
+$ItemSpec = Get-VstsInput -Name ItemSpec -Require
 
 
 Write-Output "ItemSpec: $ItemSpec" 

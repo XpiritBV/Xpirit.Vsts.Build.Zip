@@ -1,7 +1,4 @@
-Param(
-    [string] $ItemSpec = "",
-	[string] $destination
-)
+Add-Type -AssemblyName System.IO.Compression.FileSystem
 
 function Resolve-PathSafe
 {
@@ -12,13 +9,14 @@ function Resolve-PathSafe
     $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($Path)
 }
 
-Add-Type -AssemblyName System.IO.Compression.FileSystem
-
 function Unzip
 {
     param([string]$zipfile, [string]$outpath)
     [System.IO.Compression.ZipFile]::ExtractToDirectory($zipfile, $outpath)
 }
+
+$ItemSpec = Get-VstsInput -Name ItemSpec -Require
+$destination = Get-VstsInput -Name destination -Require
 
 Write-Output "ItemSpec: $ItemSpec" 
 Write-Output "Destination: $destination"

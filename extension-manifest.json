@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "PeterGroenewegen-Xpirit-Vsts-Build-Zip",
   "name": "Zip and unzip directory build task",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "publisher": "petergroenewegen",
   "public": true,
   "targets": [

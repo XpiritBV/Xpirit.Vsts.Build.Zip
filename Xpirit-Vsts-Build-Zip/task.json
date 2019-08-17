@@ -6,7 +6,7 @@
   "helpMarkDown": "[More Information](https://pgroene.wordpress.com/2016/05/28/using-the-vsts-directory-zip-and-unzip-task)",
   "category": "Utility",
   "visibility": [ "Build" ],
-  "author": "Peter Groenewegen - Xpirit",
+  "author": "Peter Groenewegen",
   "version": {
     "Major": 1,
     "Minor": 2,

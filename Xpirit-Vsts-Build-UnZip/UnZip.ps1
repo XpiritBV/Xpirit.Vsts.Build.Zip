@@ -16,7 +16,7 @@ function Unzip
 }
 
 $ItemSpec = Get-VstsInput -Name ItemSpec -Require
-$destination = Get-VstsInput -Name destination -Require
+$destination = Get-VstsInput -Name destination
 
 Write-Output "ItemSpec: $ItemSpec" 
 Write-Output "Destination: $destination"
